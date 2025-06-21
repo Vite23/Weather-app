@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <h1>Weather App</h1>
+
+        <div class="tab-container">
+
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <div class="weather-conatiner">
+
+            <!-- grant-location container -->
+
+            <div class="sub-container grant-location-container">
+                <img src="location.png" alt="" width="80" height="80" loading="lazy">
+                <p>Grant Location Access</p>
+                <p>Allow access to get weather information</p>
+                <button class="btn" data-grantAccess>Grant Access</button>
+            </div>
+
+            <!-- Search form -->
+
+            <form class="form-container" data-searchForm>
+                <input placeholder="Search for City..." data-searchInput>
+                <button class="btn" class="submit">
+                    <img src="search.png" width="20" height="20" loading="lazy">
+                </button>
+            </form>
+
+            <!--Loading Screen-->
+
+            <div class="loading-screen">
+                <img src="loading.gif" width="150" height="150">
+                <p class="sub-container">Loading</p>
+            </div>
+
+
+            <!--Show Weather info container-->
+
+            <div class="sub-container user-info-container">
+
+                <!--City name and flag-->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+
+                <!--weather Description-->
+                <p data-weatherDesc></p>
+
+                <!--Weather Icon-->
+                <img data-weatherIcon>
+
+                <!--Temperature-->
+                <p data-temp></p>
+
+                <!--3 card- parameters -->
+
+                <div class="parameter-container">
+
+                    <!--card 1-->
+                    <div class="parameter">
+                        <img src="wind.png">
+                        <p>Windspeed</p>
+                        <p data-windspeed></p>
+                    </div>
+
+                    <!--card 2-->
+                    <div class="parameter">
+                        <img src="humidity.png">
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <!--card 3-->
+                    <div class="parameter">
+                        <img src="cloud.png">
+                        <p>Clouds</p>
+                        <p data-Clouds></p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!--City not found container-->
+
+            <div class="citynotfound">
+                <img src="not-found.png">
+                <p>City not found</p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
